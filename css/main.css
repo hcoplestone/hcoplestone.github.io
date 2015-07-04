@@ -1,0 +1,608 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   1. General Styles
+   2. Header Styles
+   3. Navigation Styles
+   4. Button Styles
+   5. Typography
+   6. Helpers
+   ========================================================================== */
+
+
+/** 1. General Styles **/
+
+body {
+  background: #f9f8f4;
+/*  border-top: 2px solid #c02702;*/
+/*  border-top: 3px solid #51493d;*/
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+#pageBody {
+  margin-top: 3em;
+  margin-bottom:10em;
+  color: #51493d;
+}
+
+#pageBody a {
+  color: #995F37;
+  text-decoration: none;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+
+#pageBody a:hover {
+  color: #51493d;
+}
+
+#pageBody p a {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1.5px;
+}
+
+#pageBody .page-title {
+  text-align: center;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #d4d0cb;
+  margin-top: 2em;
+}
+
+#pageBody .page-title h2 {
+  font-size: 1.6em;
+  color: #51493d;
+}
+
+#pageBody .page-title span.description {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+span.highlight {
+  color: #996439;
+}
+
+/** 2. Header Styles **/
+
+#header {
+  background: #fff;
+  text-align: center;
+  display: block;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+#header #header-logo {
+  background-image: url(../img/logo-scaled.jpg);
+  display: block;
+  height: 200px;
+  width: 200px;
+  text-indent: -9999px;
+  margin: 0 auto;
+}
+
+#header h1 {
+  font-size: 3.6em;
+  font-weight: normal;
+  line-height: 1em;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.50em;
+  font-family: "EB Garamond", serif;
+}
+
+#header h1 span {
+  color: #c02702;
+  font-style: normal;
+}
+
+#header h2 {
+  font-weight: 300;
+  font-size: 1.1em;
+  color: #444;
+  margin-top: -0.1em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-family: "EB Garamond", serif;
+}
+
+/** 3. Navigation Styles **/
+
+#nav-banner {
+/*  background: #f9f8f4;*/
+  background: url(../img/swirl.png);
+  border-top: 2px solid #51493d;
+/*  border-top: 2px solid #c02702;*/
+  border-bottom: 1px solid #d4d0cb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .5);
+}
+
+.pure-menu-horizontal {
+  text-align: center;
+}
+
+.pure-menu-item {
+  padding: 1.1em 1em;
+  text-transform: uppercase;
+/*  font-family: "EB Garamond", serif;*/
+  font-family: 'Droid Sans', sans-serif;
+  letter-spacing: .1em;
+}
+
+.pure-menu-selected a {
+  color: #51493d; 
+  border-bottom: 1px solid #d4d0cb;
+}
+
+.pure-menu-link {
+  color: #51493d;
+}
+
+.slicknav_menu {
+/*  background: #474137;*/
+  background: #51493d;
+}
+
+.slicknav_menu .pure-menu-selected a:not(:hover) {
+  color: #d4d0cb !important;
+}
+
+/** 4. Forms **/
+
+label:not(.forCheckbox) {
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  color: #51493d;
+}
+
+label span {
+  color: #996439;
+}
+
+input[type=text], input[type=email], textarea {
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  margin-top: 0.5em !important;
+  display: block;
+}
+
+input[type=text], input[type=email] {
+  height: 2.9em;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  border: 1px solid #996439 !important;
+}
+
+input.large {
+  padding: 1.5em .5em;
+  border: 1px solid #d4d0cb;
+  font-size: .875em;
+  color: #51493d;
+  background: #f9f9f7;
+}
+
+textarea.large {
+  border: 1px solid #d4d0cb;
+  font-size: .875em;
+  color: #51493d;
+  background: #f9f9f7;
+}
+
+/** 4. Button Styles **/
+
+.pure-button {
+  font-family: 'Droid Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+   color: white;
+   border-radius: 4px;
+   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-contact {
+  background-color: #996439;
+  border-color: #996439;
+  color: #f9f8f4;
+  border-radius: 0;
+  padding: 0.8em 1.7em 0.8em 1.7em;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  
+}
+
+.button-contact:hover {
+  background-color: #474137;
+  border-color: #51493d;
+}
+
+.button-success {
+   background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+   background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+   background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+   background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+.button-xsmall {
+ font-size: 70%;
+}
+
+.button-small {
+ font-size: 85%;
+}
+
+.button-large {
+ font-size: 110%;
+}
+
+.button-xlarge {
+ font-size: 125%;
+}
+
+/** 5. Typography **/
+
+h2.content-subhead {
+  font-weight: 300;
+}
+
+/** 6. Helpers **/
+
+.small-margin-bottom {
+  margin-bottom: 3em;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/** 7. Footer **/
+
+#footer {
+  font-size: 0.9em;
+}
+
+#footer #footer-main {
+  background: #51493d;
+  color: #a09a8d;
+  text-shadow: none;
+  padding: 6em 0;
+  border-top: 2px solid #d4d0cb;
+  
+}
+
+#footer #footer-main .footer-right-column {
+  text-align: center;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+#footer #footer-main aside {
+  text-align: center;
+  font-family: 'Droid Sans', sans-serif;
+  padding: 1em 0 2.7em 0;
+}
+
+#footer #footer-main aside h4 {
+  font-family: 'Arvo', serif;
+  font-weight: 300;
+  font-size: 1.1em;
+}
+
+#footer #footer-main aside .pure-button {
+  margin-top: 0.5em;
+}
+
+#footer #footer-copyright {
+  background: #474137;
+  color: #897d6f;
+  text-shadow: none;
+  padding: 1.5em 0;
+  font-family: 'Droid Sans', sans-serif;
+  text-align: center;
+}
+
+#footer #footer-copyright ul { 
+/*  text-align: right;*/
+  text-align: center;
+  display: none;
+}
+
+#footer #footer-copyright li { 
+  display: inline-block; 
+  margin-left: 1.6em;
+}
+
+#footer #footer-copyright a {
+  color: #897d6f;
+  text-decoration: none;
+}
+
+/** Portfolio Page **/
+
+.hero-image {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.portfolio-intro {
+  padding-bottom: 3.2em;
+  border-bottom: 1px solid #d4d0cb;
+}
+
+.portfolio-details {
+  padding-top: 3em;
+  border-top: 1px solid #d4d0cb;
+}
+
+.portfolio-details h3 {
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  color: #51493d;
+}
+
+.portfolio-details p {
+  line-height: 1.75em;
+}
+
+.portfolio-details ul {
+  line-height: 1.75em;
+  list-style-type: square;
+  padding-left: 1.1em;
+  margin-top: 2em;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/*Pure CSS Small*/
+@media screen and (min-width: 48em) {
+  #footer #footer-copyright {
+    text-align: left;
+  }
+  
+  footer #footer-copyright ul { 
+    text-align: right !important;
+/*    text-align: center;*/
+  }
+}
+
+/*Pure CSS Medium*/
+@media only screen and (min-width: 48em) {
+  #footer #footer-main .bordered-right {
+      border-right: 1px solid #60574d;
+      box-sizing: border-box;
+  }
+  
+  #footer #footer-main .footer-right-column p {
+    margin-top: 6em;
+  }
+  
+  #footer #footer-main .footer-right-column span {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+  }
+  
+  #footer #footer-copyright ul { 
+  /*  text-align: right;*/
+    text-align: center;
+    display: block;
+  }
+}
+
+
+/* Menu */
+.slicknav_menu {
+	display:none;
+}
+
+@media screen and (max-width: 48em) {
+	/* #menu is the original menu */
+	.js #main-nav {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
+}
+
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
