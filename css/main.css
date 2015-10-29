@@ -305,7 +305,7 @@ textarea.large {
 }
 
 .design-link {
-  white-space: normal;
+  white-space: normal !important;
 }
 
 .button-contact:hover {
