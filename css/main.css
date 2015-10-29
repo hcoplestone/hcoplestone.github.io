@@ -1,5 +1,6 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
+
 html {
     color: #222;
     font-size: 1em;
@@ -51,6 +52,11 @@ textarea {
     padding: 0.2em 0;
 }
 
+* {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
 
 /* ==========================================================================
    Author's custom styles
@@ -70,8 +76,8 @@ textarea {
 
 body {
   background: #f9f8f4;
-/*  border-top: 2px solid #c02702;*/
-/*  border-top: 3px solid #51493d;*/
+/*  border-top: 4px solid #4A4F6A;*/
+  border-top: 3px solid #51493d;
 }
 
 .container {
@@ -82,7 +88,7 @@ body {
 
 #pageBody {
   margin-top: 3em;
-  margin-bottom:10em;
+  margin-bottom:8em;
   color: #51493d;
 }
 
@@ -106,10 +112,13 @@ body {
 }
 
 #pageBody .page-title {
-  text-align: center;
-  padding-bottom: 2em;
   border-bottom: 1px solid #d4d0cb;
-  margin-top: 2em;
+}
+
+#pageBody .page-title-light, #pageBody .page-title {
+    margin-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
 }
 
 #pageBody .page-title h2 {
@@ -131,49 +140,52 @@ span.highlight {
   background: #fff;
   text-align: center;
   display: block;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-#header #header-logo {
-  background-image: url(../img/logo-scaled.jpg);
-  display: block;
-  height: 200px;
-  width: 200px;
-  text-indent: -9999px;
-  margin: 0 auto;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 #header h1 {
-  font-size: 3.6em;
+/*  font-size: 3.6em;
   font-weight: normal;
   line-height: 1em;
   letter-spacing: -0.025em;
   margin-bottom: 0.50em;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", serif;*/
+  
+  /* Theydon Heights is a: */
+
+  font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+/*  font-family: 'Libre Baskerville', serif;*/
+  font-size: 2.3em;
+  color: #4A4F6A;
+  font-weight: 300;
+/*  line-height: 21px;*/
 }
 
 #header h1 span {
-  color: #c02702;
+  color: #AD9571;
   font-style: normal;
 }
 
 #header h2 {
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 0.9em;
   color: #444;
-  margin-top: -0.1em;
+  margin-top: 1.2em;
   letter-spacing: .2em;
   text-transform: uppercase;
+  position: relative;
   font-family: "EB Garamond", serif;
 }
+
+
 
 /** 3. Navigation Styles **/
 
 #nav-banner {
 /*  background: #f9f8f4;*/
   background: url(../img/swirl.png);
-  border-top: 2px solid #51493d;
+  border-top: 1px solid #51493d;
 /*  border-top: 2px solid #c02702;*/
   border-bottom: 1px solid #d4d0cb;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .5);
@@ -201,8 +213,8 @@ span.highlight {
 }
 
 .slicknav_menu {
-/*  background: #474137;*/
-  background: #51493d;
+  background: #474137;
+/*  background: #4A4F6A;*/
 }
 
 .slicknav_menu .pure-menu-selected a:not(:hover) {
@@ -219,6 +231,10 @@ label:not(.forCheckbox) {
 
 label span {
   color: #996439;
+}
+
+input, textarea {
+/*  width: 100% !important;*/
 }
 
 input[type=text], input[type=email], textarea {
@@ -251,6 +267,12 @@ textarea.large {
   color: #51493d;
   background: #f9f9f7;
 }
+
+.l-box {
+  padding: 2em;
+  border-;
+}
+
 
 /** 4. Button Styles **/
 
@@ -331,8 +353,16 @@ h2.content-subhead {
   margin-bottom: 3em;
 }
 
+.tiny-margin-bottom {
+  margin-bottom: 2em;
+}
+
 .center-text {
   text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 /** 7. Footer **/
@@ -404,14 +434,14 @@ h2.content-subhead {
   -webkit-border-radius: 8px;
 }
 
-.portfolio-intro {
+.site-intro, .site-main-text, .plan-details {
   padding-bottom: 3.2em;
-  border-bottom: 1px solid #d4d0cb;
+  border-bottom: 1px solid #d4d0cb; 
 }
+
 
 .portfolio-details {
   padding-top: 3em;
-  border-top: 1px solid #d4d0cb;
 }
 
 .portfolio-details h3 {
@@ -431,9 +461,124 @@ h2.content-subhead {
   margin-top: 2em;
 }
 
+/** Portfolio Listing **/
+
+.portfolio-grid-item {
+  box-sizing: border-box;
+}
+
+.thumbnail {
+/*  border-radius: 6px;*/
+/*  -moz-border-radius: 6px;*/
+/*  -webkit-border-radius: 6px;*/
+}
+
+.portfolio-grid-item a:hover .caption {
+  opacity: 1;
+}
+
+.portfolio-grid-item a {
+  position: relative;
+  display: block;
+}
+
+.portfolio-grid-item a img {
+  z-index: 4;
+}
+
+.portfolio-grid-item a .caption {
+		cursor: pointer;
+		position: absolute;
+    background: rgba(81, 73, 61, 0.96);
+/*    background: #AD9571;*/
+/*    height: 266px;*/
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+/*    width: 552px;*/
+		z-index: 5;
+		position: absolute;
+		opacity: 0;
+		-webkit-transition:all 0.45s ease-in-out;
+		-moz-transition:all 0.45s ease-in-out;
+		-o-transition:all 0.45s ease-in-out;
+		-ms-transition:all 0.45s ease-in-out;
+		transition:all 0.45s ease-in-out;
+}
+  
+.portfolio-grid-item a .caption-text{
+	z-index: 10;
+	color: #fff;
+	top:100px;
+}
+
+.portfolio-grid-item h3 {
+  font-family: 'Arvo', serif;
+  font-weight: 300;
+  margin-top: 13%;
+  color: #d4d0cb;
+}
+
+.portfolio-grid-item .table {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-grid-item .table div {
+  position: absolute;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid #996439;
+  color: #996439;
+  text-align: center;
+  font-family: "Droid Sans", helvetica, arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.813em;
+  letter-spacing: 0.175em;
+  text-transform: uppercase;
+  padding: 1.15em 1.5em 1em 1.5em;
+/*  opacity: 0;*/
+  bottom: -5%;
+  margin-left: -5.75em;
+  margin-bottom: 16%;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+.portfolio-grid-item .table div:hover {
+  color: #d4d0cb;
+  border-color: #d4d0cb;
+}
+
+/*Images */
+
+.section-images img {
+  display: inline-block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+/* small*/
+@media screen and (max-width: 48em) {
+  .hide-for-small {
+    display: none;
+  }
+  
+  .portfolio-grid-item .table div {
+    margin-bottom: 12%;
+  }
+}
 
 /*Pure CSS Small*/
 @media screen and (min-width: 48em) {
@@ -467,6 +612,31 @@ h2.content-subhead {
   /*  text-align: right;*/
     text-align: center;
     display: block;
+  }
+  
+  /* Header */
+  
+  #header {
+    background: url('/img/header.jpeg') no-repeat top !important;
+  }
+  
+/*  #header h1 {
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    color: #222;
+  }*/
+
+  #header h1 span {
+    color: #000;
+  }
+}
+
+/* Pure CSS Large */
+
+
+@media screen and (min-width: 64em)	{
+  .portfolio-grid-item {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
   }
 }
 
