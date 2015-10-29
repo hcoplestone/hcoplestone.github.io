@@ -304,6 +304,10 @@ textarea.large {
   
 }
 
+.design-link {
+  white-space: normal;
+}
+
 .button-contact:hover {
   background-color: #474137;
   border-color: #51493d;
